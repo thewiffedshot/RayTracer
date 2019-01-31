@@ -1,4 +1,6 @@
 #pragma once
+#include <cmath>
+#include <iostream>
 
 template<typename T>
 struct Vec2
@@ -18,9 +20,22 @@ struct Vec2
 	Vec2<I> operator*(float s) { return Vec2<I>(x * s, y * s); }
 	template<typename I>
 	Vec2<I> operator*(int s) { return Vec2<I>(x * s, y * s); }
+	template<typename I>
+	Vec2<I> operator*(double s) { return Vec2<I>(x * s, y * s); }
+	template<typename I>
+	Vec2<I> operator/(float s) { return Vec2<I>(x / s, y / s); }
+	template<typename I>
+	Vec2<I> operator/(int s) { return Vec2<I>(x / s, y / s); }
+	template<typename I>
+	Vec2<I> operator/(double s) { return Vec2<I>(x / s, y / s); }
+
+	T length() { return sqrt(x * x + y * y); }
+	Vec2<T> normalize() { return Vec2<T>(x / length(), y / length()); }
 
 	template<typename I>
 	I operator*(const Vec2<I> &v) { return x * v.x + y * v.y; }
+
+	void print() { std::cout << "(" << x << ", " << y << ")\n"; }
 };
 
 template<typename T>
@@ -42,11 +57,25 @@ struct Vec3
 	template<typename I>
 	Vec3<I> operator*(int s) { return Vec3<I>(x * s, y * s, z * s); }
 	template<typename I>
+	Vec3<I> operator*(double s) { return Vec3<I>(x * s, y * s, z * s); }
+	template<typename I>
+	Vec3<I> operator/(float s) { return Vec3<I>(x / s, y / s, z / s); }
+	template<typename I>
+	Vec3<I> operator/(int s) { return Vec3<I>(x / s, y / s, z / s); }
+	template<typename I>
+	Vec3<I> operator/(double s) { return Vec3<I>(x / s, y / s, z / s); }
+
+	T length() { return sqrt(x * x + y * y + z * z); }
+	Vec3<T> normalize() { return Vec3<T>(x / length(), y / length(), z / length()); }
+
+	template<typename I>
 	Vec3<I> cross(const Vec3<I> &v)
 	{ return Vec3<I>(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x); }
 
 	template<typename I>
 	I operator*(const Vec3<I> &v) { return x * v.x + y * v.y + z * v.z; }
+
+	void print() { std::cout << "(" << x << ", " << y << ", " << z << ")\n"; }
 };
 
 typedef Vec2<int> Vec2i;

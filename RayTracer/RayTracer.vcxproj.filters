@@ -21,5 +21,13 @@
     <ClCompile Include="utility.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="materials.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
