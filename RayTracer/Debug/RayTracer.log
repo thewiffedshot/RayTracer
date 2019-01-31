@@ -1,0 +1,4 @@
+﻿  RayTracer.cpp
+c:\users\sovietdoggo\source\repos\raytracer\raytracer\raytracer.cpp(46): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\sovietdoggo\source\repos\raytracer\raytracer\raytracer.cpp(46): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+  RayTracer.vcxproj -> C:\Users\SovietDoggo\source\repos\RayTracer\Debug\RayTracer.exe
