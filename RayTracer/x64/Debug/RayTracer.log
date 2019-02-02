@@ -1,4 +1,6 @@
 ﻿  RayTracer.cpp
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(48): warning C4200: nonstandard extension used: zero-sized array in struct/union
-  c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(48): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(61): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(70): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(70): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(94): warning C4715: 'cast_ray': not all control paths return a value
   RayTracer.vcxproj -> C:\Users\SovietDoggo\Documents\GitHub\RayTracer\x64\Debug\RayTracer.exe

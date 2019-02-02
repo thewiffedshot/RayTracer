@@ -8,27 +8,49 @@ struct Light
 	float intensity;
 
 	Light(Vec3f pos, Vec3f color, float intensity) : pos(pos), color(color), intensity(intensity) {}
+
 };
 
-struct Sphere
+struct Object
 {
 	Vec3f pos;
-	unsigned int radius;
 	Material mat;
 
-	Sphere(Vec3f pos, unsigned int radius, Material mat) : pos(pos), radius(radius), mat(mat) {}
+	Object(Vec3f pos, Material mat) : pos(pos), mat(mat) {}
+
+	virtual Vec3f ray_intersect(const Vec3f &origin, const Vec3f &dir) const = 0;
 };
 
-struct Plane
+struct Sphere : public Object
+{
+	unsigned int radius;
+
+	Sphere(Vec3f pos, unsigned int radius, Material mat) : Object(pos, mat), radius(radius) {}
+
+	Vec3f ray_intersect(const Vec3f &origin, const Vec3f &dir) const
+	{
+		return Vec3f(); // TODO
+	}
+};
+
+struct Plane : public Object
 {
 	Vec3f verts[4];
+	Vec3f normal;
+	unsigned int width, depth;
 
-	Plane(Vec3f pos, unsigned int width, unsigned int depth)
+	Plane(Vec3f pos, Vec3f normal, unsigned int width, unsigned int depth, Material mat)
+		: Object(pos, mat), width(width), depth(depth), normal(normal.normalize())
 	{
 		verts[0] = Vec3f(pos.x - width / 2, pos.y, pos.z + depth / 2);
 		verts[1] = Vec3f(pos.x + width / 2, pos.y, pos.z + depth / 2);
 		verts[2] = Vec3f(pos.x + width / 2, pos.y, pos.z - depth / 2);
 		verts[3] = Vec3f(pos.x - width / 2, pos.y, pos.z - depth / 2);
+	}
+
+	Vec3f ray_intersect(const Vec3f &origin, const Vec3f &dir) const
+	{
+		return Vec3f(); // TODO
 	}
 };
 

@@ -16,18 +16,15 @@ struct Vec2
 	Vec2<I> operator-(const Vec2<I> &v) { return Vec2<I>(x - v.x, y - v.y); }
 	template<typename I>
 	Vec2<I> operator+(const Vec2<I> &v) { return Vec2<I>(x + v.x, y + v.y); }
-	template<typename I>
-	Vec2<I> operator*(float s) { return Vec2<I>(x * s, y * s); }
-	template<typename I>
-	Vec2<I> operator*(int s) { return Vec2<I>(x * s, y * s); }
-	template<typename I>
-	Vec2<I> operator*(double s) { return Vec2<I>(x * s, y * s); }
-	template<typename I>
-	Vec2<I> operator/(float s) { return Vec2<I>(x / s, y / s); }
-	template<typename I>
-	Vec2<I> operator/(int s) { return Vec2<I>(x / s, y / s); }
-	template<typename I>
-	Vec2<I> operator/(double s) { return Vec2<I>(x / s, y / s); }
+
+	Vec2<T> operator*(float s) { return Vec2<T>(x * s, y * s); }
+	Vec2<T> operator*(int s) { return Vec2<T>(x * s, y * s); }
+	Vec2<T> operator*(double s) { return Vec2<T>(x * s, y * s); }
+	Vec2<T> operator/(float s) { return Vec2<T>(x / s, y / s); }
+	Vec2<T> operator/(int s) { return Vec2<T>(x / s, y / s); }
+	Vec2<T> operator/(double s) { return Vec2<T>(x / s, y / s); }
+
+	bool operator!=(const Vec2<T> &v) { return x == v.x && y == v.y; }
 
 	T length() { return sqrt(x * x + y * y); }
 	Vec2<T> normalize() { return Vec2<T>(x / length(), y / length()); }
@@ -52,18 +49,15 @@ struct Vec3
 	Vec3<I> operator+(const Vec3<I> &v) { return Vec3<I>(x + v.x, y + v.y, z + v.z); }
 	template<typename I>
 	Vec3<I> operator-(const Vec3<I> &v) { return Vec3<I>(x - v.x, y - v.y, z - v.z); }
-	template<typename I>
-	Vec3<I> operator*(float s) { return Vec3<I>(x * s, y * s, z * s); }
-	template<typename I>
-	Vec3<I> operator*(int s) { return Vec3<I>(x * s, y * s, z * s); }
-	template<typename I>
-	Vec3<I> operator*(double s) { return Vec3<I>(x * s, y * s, z * s); }
-	template<typename I>
-	Vec3<I> operator/(float s) { return Vec3<I>(x / s, y / s, z / s); }
-	template<typename I>
-	Vec3<I> operator/(int s) { return Vec3<I>(x / s, y / s, z / s); }
-	template<typename I>
-	Vec3<I> operator/(double s) { return Vec3<I>(x / s, y / s, z / s); }
+
+	Vec3<T> operator*(float s) { return Vec3<T>(x * s, y * s, z * s); }
+	Vec3<T> operator*(int s) { return Vec3<T>(x * s, y * s, z * s); }
+	Vec3<T> operator*(double s) { return Vec3<T>(x * s, y * s, z * s); }
+	Vec3<T> operator/(float s) { return Vec3<T>(x / s, y / s, z / s); }
+	Vec3<T> operator/(int s) { return Vec3<T>(x / s, y / s, z / s); }
+	Vec3<T> operator/(double s) { return Vec3<T>(x / s, y / s, z / s); }
+
+	bool operator!=(const Vec3<T> &v) { return x == v.x && y == v.y && z == v.z; }
 
 	T length() { return sqrt(x * x + y * y + z * z); }
 	Vec3<T> normalize() { return Vec3<T>(x / length(), y / length(), z / length()); }
