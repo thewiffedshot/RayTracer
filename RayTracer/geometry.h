@@ -8,7 +8,7 @@ struct Light
 	Vec3f color;
 	float intensity;
 
-	Light(Vec3f pos, Vec3f color, float intensity) : pos(pos), color(color), intensity(intensity) {}
+	Light(Vec3f pos, Vec3f color, float intensity) : pos(pos), color(color * 255), intensity(intensity) {}
 };
 
 struct Object
@@ -19,6 +19,7 @@ struct Object
 	Object(Vec3f pos, Material mat) : pos(pos), mat(mat) {}
 
 	virtual Vec3f ray_intersect(const Vec3f &origin, const Vec3f &dir) const = 0;
+	virtual Vec3f getNormal(const Vec3f &intersect) const = 0;
 };
 
 struct Sphere : public Object
@@ -55,6 +56,8 @@ struct Sphere : public Object
 			return Vec3f();
 		}
 	}
+
+	Vec3f getNormal(const Vec3f &intersect) const { return (intersect - pos).normalize(); }
 };
 
 struct Plane : public Object
@@ -92,6 +95,8 @@ struct Plane : public Object
 
 		return Vec3f();
 	}
+
+	Vec3f getNormal(const Vec3f &intersect) const { return normal; }
 };
 
 struct Triangle
