@@ -63,3 +63,14 @@ const Material red
 	12.8f,
 	0.0f
 };
+
+const Material violet
+{
+	DIFFUSE,
+	Vec3f(0.0, 0.0, 0.0),
+	Vec3f(0.635294, 0.0, 1.0) * 255,
+	Vec3f(0.0225, 0.0225, 0.0225) * 255,
+	Vec3f(0.0, 0.0, 0.0),
+	12.8f,
+	0.0f
+};

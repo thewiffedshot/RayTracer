@@ -31,6 +31,7 @@ struct Sphere : public Object
 	Vec3f ray_intersect(const Vec3f &origin, const Vec3f &dir) const
 	{
 		Vec3f rayToCenter = origin - pos;
+
 		float rtcLength = rayToCenter.length();
 
 		float dValue = (rayToCenter * dir) * (rayToCenter * dir) - (rtcLength * rtcLength - radius * radius);
