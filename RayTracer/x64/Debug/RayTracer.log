@@ -2,5 +2,8 @@
 c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(61): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(115): warning C4200: nonstandard extension used: zero-sized array in struct/union
   c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(115): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(117): warning C4715: 'cast_ray': not all control paths return a value
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(52): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(61): warning C4244: 'argument': conversion from 'float' to 'short', possible loss of data
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(142): warning C4715: 'cast_ray': not all control paths return a value
   RayTracer.vcxproj -> C:\Users\SovietDoggo\Documents\GitHub\RayTracer\x64\Debug\RayTracer.exe

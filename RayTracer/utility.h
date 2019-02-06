@@ -81,6 +81,7 @@ struct Vec3
 	friend T operator*(const Vec3<T> &v1, const Vec3<T> &v2) { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z; }
 
 	void print() { std::cout << "(" << x << ", " << y << ", " << z << ")\n"; }
+
 };
 
 typedef Vec2<short> Vec2s;
