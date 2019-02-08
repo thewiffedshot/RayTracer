@@ -1,16 +1,20 @@
-﻿  materials.h
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(61): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(71): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(72): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  utility.h
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
   RayTracer.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
 c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(61): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(71): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(72): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(129): warning C4200: nonstandard extension used: zero-sized array in struct/union
-  c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(129): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(63): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(74): warning C4244: 'argument': conversion from 'float' to 'short', possible loss of data
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(116): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\sovietdoggo\documents\github\raytracer\raytracer\geometry.h(116): note: This member will be ignored by a defaulted constructor or copy/move assignment operator
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(63): warning C4244: 'argument': conversion from 'float' to 'short', possible loss of data
+  materials.h
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(61): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(71): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\materials.h(72): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating Code...
-c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(165): warning C4715: 'cast_ray': not all control paths return a value
+c:\users\sovietdoggo\documents\github\raytracer\raytracer\raytracer.cpp(157): warning C4715: 'cast_ray': not all control paths return a value
   RayTracer.vcxproj -> C:\Users\SovietDoggo\Documents\GitHub\RayTracer\x64\Debug\RayTracer.exe
